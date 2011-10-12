@@ -45,7 +45,7 @@ class TwitPhoto
   # == Example:
   #    TwitPhoto::TwitPhoto.getPhotoUrlFromUrl "http://yfrog.com/kfx6gdj"
   def self.getPhotoUrlFromUrl url
-    adaptors = [Adaptors::YFrogAdaptor, Adaptors::TwitPicAdaptor, Adaptors::LockerzAdaptor, Adaptors::InstagramAdaptor]
+    adaptors = [Adaptors::YFrogAdaptor, Adaptors::TwitPicAdaptor, Adaptors::LockerzAdaptor, Adaptors::InstagramAdaptor, Adaptors::MiscAdaptor]
 
     adaptors.each do |adaptor|
        imageUrl = adaptor.getImageUrl url
