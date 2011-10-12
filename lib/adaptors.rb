@@ -13,7 +13,7 @@ class Adaptors
           url = url + "/"
         end
 
-        return url + "media/?size=m"
+        return url + "media/?size=l"
     end
   end
 
