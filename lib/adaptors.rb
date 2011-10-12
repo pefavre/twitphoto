@@ -55,6 +55,16 @@ class Adaptors
         return "http://yfrog.com" + id + ":medium"
     end
   end
+  
+  class MiscAdaptor
+    def self.getImageUrl url
+        # check for other adaptors domains
+        if url.index("http://twitpic.com") == 0 && url.index("http://yfrog.") == 0 && url.index("http://twitpic.com") == 0 && url.index("http://tweetphoto.com") == 0 && url.index("http://plixi.com") == 0 && url.index("http://lockerz.com") == 0 && url.index("http://instagr.am") == 0
+          return nil
+        end
+        return url
+    end
+  end
 
 end
 end
