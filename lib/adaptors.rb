@@ -30,7 +30,7 @@ class Adaptors
 
   class TwitPicAdaptor
     def self.getImageUrl url
-        # check for "http://twitpic.com" (no domain since yfrog supports many domains
+        # check for "http://twitpic.com" 
         if url.index("http://twitpic.com") != 0
           return nil
         end
@@ -41,6 +41,20 @@ class Adaptors
         return "http://twitpic.com/show/large" + id 
     end
   end
+
+  class ImgLyAdaptor
+     def self.getImageUrl url
+         # check for "http://img.ly" 
+         if url.index("http://img.ly") != 0
+           return nil
+         end
+
+         uri = URI.parse(url)
+         id = uri.path
+
+         return "http://img.ly/show/large" + id 
+     end
+   end
 
   class YFrogAdaptor
     def self.getImageUrl url
