@@ -4,7 +4,7 @@ module TwitPhoto
 class Adaptors
   class InstagramAdaptor
     def self.getImageUrl url
-        if url.index("http://instagr.am") != 0
+        if url.index("http://instagr.am") != 0 && url.index("http://instagram.com") != 0
           return nil
         end
 
